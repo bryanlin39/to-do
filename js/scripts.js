@@ -15,31 +15,20 @@ $(document).ready(function() {
     var priority = $("#priority").val();
     var notes = $("#notes").val();
     var dueDate = $("#due").val();
-    var checkBox = "<label><input type='checkbox' name='checkBox'></label>"
+    var checkBox = "<input type='checkbox' name='checkBox'>"
 
 
     var newTask = new Task(taskName, priority, notes, dueDate, checkBox);
 
     $("#task-list").append("<p>" + newTask.checkBox + "<span class='task'>" + newTask.taskName + "</span></p>");
 
-    // $("#task-list").append("<p><label><input type='checkbox' name='checkBox'><span class='task'>" + newTask.taskName +  "</span></label></p>");
 
     $("input[name='checkBox']").click(function() {
       if (this.checked) {
+        $(this).next().remove();
         $(this).remove();
       }
-    })
-    // $("#task-list").append("<p><label><input type='checkbox' id='checkBox' name='checkboxes'><span class='task'>" + newTask.taskName +  "</span></label></p>");
-    // $("input:checkbox[name=checkboxes]:checked").each(function(){
-    //   var deleteChecked = $(this).val();
-    //   $("#btnDeleteid").click(function(){
-    //     $("deleteChecked").remove();
-    //   })
-    // })
-
-    // if (document.getElementById('checkbox').checked) {
-    //   $(this).remove();
-    // }
+    });
 
     $(".task").click(function() {
       $("#show-task").toggle();
@@ -48,6 +37,5 @@ $(document).ready(function() {
       $("#notes-output").text(newTask.notes);
       $("#dueDate-output").text(newTask.dueDate);
     });
-
   });
 });
