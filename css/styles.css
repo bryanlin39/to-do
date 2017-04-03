@@ -1,9 +1,15 @@
 .priority p {
   display: inline-block;
+  font-weight: bold;
 }
 
 .form-element {
   padding: 10px;
+}
+
+#due {
+  width: 30%;
+  display: inline-block;
 }
 
 #show-task {
@@ -17,4 +23,5 @@
 .task {
   cursor: pointer;
   color: #0088cc;
+  padding-left: 10px;
 }
