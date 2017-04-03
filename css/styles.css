@@ -1,12 +1,20 @@
-#show-contact {
+.priority p {
+  display: inline-block;
+}
+
+.form-element {
+  padding: 10px;
+}
+
+#show-task {
   display: none;
 }
 
-.contact {
-  cursor: pointer;
-  color: #0088cc;
+.task:hover {
+  text-decoration: underline;
 }
 
-.contact:hover {
-  text-decoration: underline;
+.task {
+  cursor: pointer;
+  color: #0088cc;
 }

@@ -13,10 +13,46 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
+          <form>
+            <div class="form-element">
+              <label for="task">Task Name:</label>
+              <input id="task" type="text">
+            </div>
+            <div class="form-element priority">
+              <p>Priority:</p>
+              <select id="priority">
+                <option>Blocker</option>
+                <option>Critical</option>
+                <option>Moderate</option>
+                <option>Minor</option>
+                <option>Trivial</option>
+              </select>
+            </div>
+            <div class="form-element">
+              <label for="notes">Description:</label>
+              <input id="notes" type="text">
+            </div>
+            <div class="form-element">
+              <label for="due">Due Date:</label>
+              <input id="due" class="form-control" type="date">
+            </div>
+            <div class="form-element">
+              <button type="submit" class="btn">Add</button>
+            </div>
+          </form>
+          <div id="task-list">
+            <ul>
 
+            </ul>
+          </div>
         </div>
         <div class="col-md-6">
-
+          <div id="show-task">
+            <h2></h2>
+            <p>Priority: <span id="priority-output"></span></p>
+            <p>Description: <span id="notes-output"></span></p>
+            <p>Due Date: <span id="dueDate-output"></span></p>
+          </div>
         </div>
       </div>
     </div>

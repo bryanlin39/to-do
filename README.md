@@ -11,9 +11,9 @@ _{Make a to do list webpage where people can add tasks to create a list of thing
 ## Specification
 
 * _Input task with all available properties and output task name_
+* _Include date form item due date_
 * _Click on task to show all task properties_
 * _Click X next to task name to remove task_
-* _Include date form item due date_
 * _If current date > past due, highlight task in red_
 
 ## Known Bugs
